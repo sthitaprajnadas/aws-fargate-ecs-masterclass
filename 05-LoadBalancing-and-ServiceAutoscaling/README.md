@@ -62,6 +62,8 @@ docker push <replace-with-your-docker-hub-id>/nginxapp3
     - **Container Image:** stacksimplify/nginxapp1
 - **App2 Task Definition:** aws-nginx-app2
     - **Launch Type:** EC2
+    - **Network mode:** default
+    - **Task Memory and Task CPu:** Not required
     - **Container Image:** stacksimplify/nginxapp2
     
 
@@ -90,6 +92,7 @@ docker push <replace-with-your-docker-hub-id>/nginxapp3
 
 - **Service Name:** aws-nginx-app2-svc
 - **Cluster:** ecs-ec2-demo
+- Service Type : Replica ( when using capacity providers , daemon wont be an option)
 - Number of Tasks: 2
 - Choose VPC & Create Security Group
 - Select Application Load Balancer
